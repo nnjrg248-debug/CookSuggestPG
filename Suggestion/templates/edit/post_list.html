@@ -2,8 +2,8 @@
 {% if user.is_authenticated %}
     <!-- ログインしている時だけ表示 -->
     <p>ようこそ、{{ user.username }}さん</p>
-    <!--<form action="{% url 'logout' %}" method="post">-->
-    <form action="{% url 'login' %}" method="post">
+    <form action="{% url 'logout' %}" method="post">
+    <!--<form action="{% url 'login' %}" method="post">-->
         {% csrf_token %}
 
         <a href="{% url 'memo_list' %}"style="font-weight: bold; font-size: 1.2em;">👉メモ一覧</a>

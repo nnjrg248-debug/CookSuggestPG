@@ -126,8 +126,8 @@ LOGIN_URL = 'login'#未ログイン時飛ばされるところ
 LOGIN_REDIRECT_URL = '/'  # ログインが成功した後に自動で飛ばす先（TOPページなど）
 
 #LOGOUT_REDIRECT_URL = 'login'#ログアウトした後に飛ばす先（ログイン画面に戻すのが一般的）
-LOGIN_REDIRECT_URL = 'post_list' # ここが 'login' になっていると無限ループします
-
+#LOGIN_REDIRECT_URL = 'post_list' # ここが 'login' になっていると無限ループします
+LOGOUT_REDIRECT_URL='login'
 #LOGOUT_REDIRECT_URL='login'#これによりボタンを押すと内部でログアウト処理が走り、自動的にログイン画面（または指定したページ）へ移動して「未ログイン状態」
 #正しくは、「ログアウトボタン（POST送信）を押してログアウト処理が終わった瞬間に、自動で『ログイン画面』へ飛ばしてくれる設定」
 #{%url 'login'%}のボタン押すとログアウトになるわけではない
